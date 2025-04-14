@@ -1,0 +1,10 @@
+1 - Abra o CMD
+
+2 - Vá para a pasta do projeto:
+
+	D:
+	cd "Associação Carajás\Sistema"
+
+3 - Ative o ambiente virtual:
+
+	venv\Scripts\activate
