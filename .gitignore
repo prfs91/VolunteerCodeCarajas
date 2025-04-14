@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 # Ignorar ambiente virtual
+=======
+>>>>>>> bd0bcf97b766b107f98e2d709bb3b535e6e5e434
 venv/
 __pycache__/
 *.pyc
 db.sqlite3
+<<<<<<< HEAD
 *.log
 *.env
+=======
+.env
+*.log
+*.sqlite3
+>>>>>>> bd0bcf97b766b107f98e2d709bb3b535e6e5e434
