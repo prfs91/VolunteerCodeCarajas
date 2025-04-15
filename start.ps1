@@ -2,7 +2,7 @@
 Set-Location -Path (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 # Verifica se o ambiente virtual existe, se não, cria
-if (-Not (Test-Path ".\venv"))
+if (-Not (Test-Path ".\.venv"))
 {
     Write-Host "Criando o ambiente virtual..."
     python -m venv venv
