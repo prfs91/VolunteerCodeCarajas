@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Lista de Associados</title>
-</head>
-<body>
-    <h1>Lista de Associados</h1>
-    <ul>
-        {% for associado in associados %}
-        <li>{{ associado.nome }} - {{ associado.email }} - Entrou em {{ associado.data_entrada|date:"d/m/Y" }}</li>
-        {% empty %}
-            <li>Nenhum associado encontrado.</li>
-        {% endfor %}
-    </ul>
-    <p><a href="{% url 'cadastrar_associado' %}">Cadastrar novo associado</a></p>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Lista de Associados{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Lista de Associados</h1>
+<ul class="list-group mb-3">
+    {% for associado in associados %}
+    <li class="list-group-item">
+        <strong>{{ associado.nome }}</strong> - {{ associado.email }} - Entrou em {{ associado.data_entrada|date:"d/m/Y" }}
+    </li>
+    {% empty %}
+    <li class="list-group-item text-muted">Nenhum associado encontrado.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
