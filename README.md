@@ -8,7 +8,7 @@
 
 ## 📖 **Sobre o Projeto**
 
-**VolunteerCodeCarajas** é muito mais do que um sistema. Este é um **projeto de aprendizado e de impacto real**. Nascendo no coração da **Associação Carajás de Pessoas com Deficiência**, em Tucuruí - PA, este sistema visa transformar a gestão da associação, por meio da **tecnologia, dados e inclusão**.  
+**VolunteerCodeCarajas** é muito mais do que um sistema. Este é um **projeto de aprendizado e de impacto real**. Nascendo no coração da **Associação Carajás de Pessoas com Deficiência**, em Tucuruí - PA, este sistema visa transformar a gestão da associação, por meio da **tecnologia, dados e inclusão**.
 Cada linha de código escrita aqui é um passo em direção a um mundo mais acessível, mais justo e mais inclusivo. 🚀
 
 Este é um **projeto voluntário**, que comecei a desenvolver **do zero**, com o objetivo de **aprender, crescer e impactar vidas**. Minha jornada começou no dia **10/04/2025**, e é apenas o começo. Este repositório, ainda vazio de funcionalidades avançadas, contém **o primeiro passo**: o **sistema de cadastro de associados**. À medida que aprendo e cresço, o sistema será expandido para **gerenciar mensalidades, o financeiro e projetos da associação**.
@@ -48,9 +48,7 @@ Este projeto é a **ponte entre a teoria que aprendi e a prática que agora esto
 Aqui está o meu **convite à colaboração**:
 
 - 💻 **Profissionais de TI e Engenharia de Dados**: Se você tem experiência em **desenvolvimento de sistemas**, **engenharia de dados**, **segurança de dados**, ou qualquer área relacionada, sua contribuição será fundamental! Se você tiver **15 minutos do seu tempo** para discutir os primeiros passos ou ajudar com análise de requisitos, eu ficarei imensamente grata!
-  
 - 🧠 **Psicólogos e neuropsicólogos**: Dada minha condição de autismo e TDAH, sua ajuda para construir uma **organização mental e estruturada** de ideias será muito importante. Se você também tiver algum conhecimento em TI, melhor ainda! Sua colaboração será fundamental para garantir que o projeto seja acessível e eficiente.
-
 - 📚 **Estudantes e Iniciantes em PostgreSQL**: Se você está começando sua jornada em **banco de dados** e tem tempo para contribuir, este é o **lugar perfeito** para aprender e colaborar de forma prática. Juntos, podemos crescer e construir algo **impactante** para a comunidade.
 
 ---
@@ -69,7 +67,16 @@ Quando você se junta a esse projeto, você não está apenas ajudando a **desen
 
 ## 📜 **Licença**
 
-Este projeto está licenciado sob a **MIT License**, o que significa que ele é **open source** e livre para contribuições e modificações, com a única exigência de que você mantenha os créditos originais. 
+Este projeto está licenciado sob a **MIT License**, o que significa que ele é **open source** e livre para contribuições e modificações, com a única exigência de que você mantenha os créditos originais.
+
+---
+
+## 📄 Créditos de Terceiros
+
+Este projeto utiliza o script [`wait-for-it.sh`](https://github.com/vishnubob/wait-for-it) criado por [vishnubob](https://github.com/vishnubob), licenciado sob a [MIT License](https://github.com/vishnubob/wait-for-it/blob/master/LICENSE).
+Esse script foi incluído na raiz deste repositório para facilitar o uso com containers e serviços que exigem espera por dependências.
+
+**MIT License**, o que significa que ele é **open source** e livre para contribuições e modificações, com a única exigência de que você mantenha os créditos originais.
 
 ---
 
@@ -84,13 +91,13 @@ Se você se identifica com o projeto, tem sugestões ou deseja contribuir de alg
 
 ## 🌟 **Vamos Juntos Construir um Futuro Sem Barreiras**
 
-Este projeto não é apenas sobre **desenvolver um sistema**. Ele é sobre **inclusão, diversidade e aprendizagem**. Aqui, cada linha de código é uma chance de quebrar **fronteiras**, de transformar **vidas** e de mostrar que, com **colaboração**, podemos criar algo **sustentável e transformador**. 
+Este projeto não é apenas sobre **desenvolver um sistema**. Ele é sobre **inclusão, diversidade e aprendizagem**. Aqui, cada linha de código é uma chance de quebrar **fronteiras**, de transformar **vidas** e de mostrar que, com **colaboração**, podemos criar algo **sustentável e transformador**.
 
 **Junte-se a mim** para criar um **futuro mais inclusivo e acessível**. ✨
 
 ---
 
-Com carinho,  
-**Roberta** 🐍💙  
-📍 Tucuruí, Pará  
+Com carinho,
+**Roberta** 🐍💙
+📍 Tucuruí, Pará
 📚 Engenheira de dados em construção | Voluntária da Associação Carajás | Autista, TDAH e sonhadora 🌌
