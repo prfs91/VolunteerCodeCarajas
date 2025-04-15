@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Associados</title>
+</head>
+<body>
+    <h1>Lista de Associados</h1>
+    <ul>
+        {% for associado in associados %}
+            <li>{{ associado.nome }} - {{ associado.email }}</li>
+        {% empty %}
+            <li>Nenhum associado encontrado.</li>
+        {% endfor %}
+    </ul>
+    <p><a href="{% url 'cadastrar_associado' %}">Cadastrar novo associado</a></p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastrar Associado</title>
+</head>
+<body>
+    <h1>Cadastrar Associado</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar</button>
+    </form>
+    <p><a href="{% url 'lista_associados' %}">Ver todos os associados</a></p>
+</body>
+</html>
