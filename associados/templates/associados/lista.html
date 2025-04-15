@@ -7,7 +7,7 @@
     <h1>Lista de Associados</h1>
     <ul>
         {% for associado in associados %}
-            <li>{{ associado.nome }} - {{ associado.email }}</li>
+        <li>{{ associado.nome }} - {{ associado.email }} - Entrou em {{ associado.data_entrada|date:"d/m/Y" }}</li>
         {% empty %}
             <li>Nenhum associado encontrado.</li>
         {% endfor %}
