@@ -33,7 +33,6 @@ class AssociadoForm(forms.ModelForm):
             
             # DOCUMENTAÇÃO LEGAL
             'numero_associado', 
-            'data_entrada', 
             'status', 
             'comprovante_residencia', 
             'autorizacao_uso_imagem', 
