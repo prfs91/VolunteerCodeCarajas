@@ -10,7 +10,7 @@ if (-Not (Test-Path ".\.venv"))
 
 # Ativa o ambiente virtual
 Write-Host "Ativando o ambiente virtual..."
-.\venv\Scripts\Activate.ps1
+.venv\Scripts\Activate.ps1
 
 # Instala as dependências do requirements.txt
 Write-Host "Instalando dependencias..."
