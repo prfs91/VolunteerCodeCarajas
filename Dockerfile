@@ -1,5 +1,5 @@
-# Usa a imagem oficial do Python
-FROM python:3.13
+# Usa a imagem slim (mais leve e com menos vulnerabilidades)
+FROM python:3.13.3-slim-bullseye
 
 # Define o diretório de trabalho dentro do container
 WORKDIR /app

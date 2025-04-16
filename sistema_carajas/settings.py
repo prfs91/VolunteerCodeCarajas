@@ -98,6 +98,7 @@ else:
         f"@{config('DB_HOST')}:{config('DB_PORT')}/{config('DB_NAME')}"
     )
 
+
 # Converte a DATABASE_URL (string) para o formato que o Django usa para configurar o banco de dados
 # Esse dicionário vai dentro de DATABASES['default']
 DATABASES = {
