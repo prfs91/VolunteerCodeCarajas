@@ -10,9 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+# Importa a função 'config' do pacote 'python-decouple', usada para ler variáveis do arquivo .env
+from decouple import config
+
 from pathlib import Path
 
-from decouple import config
+# Importa o pacote que transforma uma URL de banco de dados em um dicionário no formato que o Django espera
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -75,15 +79,29 @@ WSGI_APPLICATION = 'sistema_carajas.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# Lê a variável 'USE_NEON' do .env para saber se deve usar banco em nuvem (com SSL) ou local (sem SSL)
+# Se não encontrar no .env, assume False (local)
+# 'cast=bool' converte a string "True"/"False" para booleano real (True/False)
+USE_NEON = config('USE_NEON', default=False, cast=bool)
+
+# Verifica se o ambiente é de produção (com Neon, Railway, etc.)
+if USE_NEON:
+    # Monta a URL de conexão com o banco, incluindo 'sslmode=require' para exigir SSL (obrigatório para bancos na nuvem)
+    DATABASE_URL = (
+        f"postgresql://{config('DB_USER')}:{config('DB_PASSWORD')}"
+        f"@{config('DB_HOST')}:{config('DB_PORT')}/{config('DB_NAME')}?sslmode=require"
+    )
+else:
+    # Monta a URL de conexão com o banco local (sem SSL)
+    DATABASE_URL = (
+        f"postgresql://{config('DB_USER')}:{config('DB_PASSWORD')}"
+        f"@{config('DB_HOST')}:{config('DB_PORT')}/{config('DB_NAME')}"
+    )
+
+# Converte a DATABASE_URL (string) para o formato que o Django usa para configurar o banco de dados
+# Esse dicionário vai dentro de DATABASES['default']
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME'), # Lê do .env o nome do banco de dados que você criou no PostgreSQL
-        'USER': config('DB_USER'),    # Lê do .env o usuário do banco de dados PostgreSQL
-        'PASSWORD': config('DB_PASSWORD'),  # Lê do .env a senha desse usuário
-        'HOST': config('DB_HOST', default='localhost'),      # Lê do .env, se não existir usa 'localhost' para banco local
-        'PORT': config('DB_PORT', default='5432'),           # Lê do .env, se não existir usa '5432', a porta padrão do PostgreSQL
-    }
+    'default': dj_database_url.config(default=DATABASE_URL)
 }
 
 
@@ -127,3 +145,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+print("🔗 Conectando ao banco:", config('DB_HOST'))
