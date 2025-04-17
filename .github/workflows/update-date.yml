@@ -1,35 +1,35 @@
-name: Update Date in Wiki File  # Nome do workflow. Aparece na lista de workflows do GitHub Actions.
+name: Update Date in Wiki Files
 
 on:
   push:
     paths:
-      - 'caminho/para/seu/arquivo.md'  # O workflow será acionado sempre que houver um push no arquivo específico .md (substitua pelo caminho real do seu arquivo).
+      - '**/*.md'
 
 jobs:
-  update_date:  # Nome do job que será executado no GitHub Actions
-    runs-on: ubuntu-latest  # Define que o job será executado em um ambiente Ubuntu.
+  update_date:
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code  # Primeira etapa do job. Ação para fazer o "checkout" (baixar) do código do repositório.
-      uses: actions/checkout@v2  # Usa a ação oficial do GitHub para fazer o checkout do código.
+    - name: Checkout Wiki repository
+      uses: actions/checkout@v3
 
-    - name: Atualizar data no arquivo Markdown  # Segunda etapa: Atualizar a data no arquivo Markdown.
+    - name: Atualizar datas nos arquivos Markdown modificados
       run: |
-        FILE_PATH="caminho/para/seu/arquivo.md"  # Define o caminho para o arquivo .md que será alterado (substitua pelo caminho real).
-        LAST_MODIFIED=$(date +"%Y-%m-%d %H:%M:%S")  # Captura a data e hora atuais no formato "YYYY-MM-DD HH:MM:SS".
+        git fetch origin main
+        MODIFIED_FILES=$(git diff --name-only HEAD~1 HEAD | grep '\.md$')
 
-        # Substitui a linha existente com a data de modificação ou, caso não exista, adiciona uma nova linha.
-        sed -i "s/^Última modificação em:.*/Última modificação em: $LAST_MODIFIED/" "$FILE_PATH" || echo "Última modificação em: $LAST_MODIFIED" >> "$FILE_PATH"  # O comando `sed` busca a linha com a data e substitui ou, se não encontrar, adiciona a linha no final do arquivo.
+        for FILE_PATH in $MODIFIED_FILES; do
+          echo "Atualizando data em: $FILE_PATH"
+          LAST_MODIFIED=$(date +"%Y-%m-%d %H:%M:%S")
+          sed -i "s/^Última modificação em:.*/Última modificação em: $LAST_MODIFIED/" "$FILE_PATH" \
+            || echo -e "\n**Última modificação em:** $LAST_MODIFIED" >> "$FILE_PATH"
+        done
 
-        # Configura o nome e e-mail do autor do commit para o GitHub.
-        git config --global user.name "Seu Nome"  # Substitua por seu nome.
-        git config --global user.email "seu-email@example.com"  # Substitua por seu e-mail.
+        git config --global user.name "prfs91"
+        git config --global user.email "71240638+prfs91@users.noreply.github.com"
+
+        git add $MODIFIED_FILES
+        git commit -m "📚 docs(workflow): Update modification date in wiki file"
+        git push
         
-        # Adiciona o arquivo alterado ao índice do git para ser incluído no commit.
-        git add "$FILE_PATH"  # Adiciona o arquivo ao estágio de commit.
-
-        # Cria o commit com a mensagem informando que a data foi atualizada.
-        git commit -m "Atualizando data de modificação no arquivo Wiki"  # Mensagem do commit.
-
-        # Empurra o commit para o repositório remoto (GitHub).
-        git push  # Envia a alteração para o repositório remoto no GitHub.
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/prfs91/VolunteerCodeCarajas.wiki.git
