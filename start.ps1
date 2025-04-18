@@ -35,17 +35,17 @@ $missingOrOutdated = @()
 
 # Percorre cada linha do arquivo requirements.txt, onde cada linha representa uma dependência
 foreach ($line in $requiredPackages) {
-    
+
     # Usa uma expressão regular para separar o nome do pacote e a versão exigida no requirements.txt
     # Se a linha estiver no formato correto "pacote==versão", o nome e a versão serão extraídos
     if ($line -match "^(.*)==(.*)$") {
         $packageName = $matches[1]  # Armazena o nome do pacote (antes do '==')
         $requiredVersion = $matches[2]  # Armazena a versão requerida (após o '==')
-        
+
         # Procura o pacote instalado que corresponde ao nome do pacote no requirements.txt
         # O `Where-Object` busca no array de pacotes instalados o nome que começa com o nome do pacote atual
         $installedPackage = $installedPackages | Where-Object { $_ -like "$packageName*" }
-        
+
         # Se o pacote não foi encontrado na lista de pacotes instalados
         if ($installedPackage -eq $null) {
             # Adiciona o pacote à lista de pacotes faltantes
@@ -54,7 +54,7 @@ foreach ($line in $requiredPackages) {
         else {
             # Se o pacote foi encontrado, compara a versão instalada com a versão requerida
             $installedVersion = ($installedPackage -split "==")[1]  # Obtém a versão do pacote instalado
-            
+
             # Se a versão instalada for diferente da versão exigida, adiciona o pacote à lista de pacotes desatualizados
             if ($installedVersion -ne $requiredVersion) {
                 $missingOrOutdated += $line  # Adiciona à lista de pacotes desatualizados
@@ -67,7 +67,7 @@ foreach ($line in $requiredPackages) {
 if ($missingOrOutdated.Count -gt 0) {
     # Informa ao usuário que as dependências serão instaladas ou atualizadas
     Write-Host "Instalando/Atualizando dependências..."
-    
+
     # Instala os pacotes que estão faltando ou desatualizados
     # O `pip install` irá instalar ou atualizar os pacotes necessários
     pip install $missingOrOutdated
