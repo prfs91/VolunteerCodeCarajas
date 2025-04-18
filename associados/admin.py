@@ -1,5 +1,7 @@
 from django.contrib import admin
+
 from .models import Associado
+
 
 # Registrando o modelo Associado no admin com uma configuração personalizada
 @admin.register(Associado)
