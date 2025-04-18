@@ -1,0 +1,22 @@
+repos:
+  # Remove espaços em branco no final das linhas e adiciona quebra de linha no fim dos arquivos
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+
+  # Linter de Python com flake8
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.2.0
+    hooks:
+      - id: flake8
+        additional_dependencies: [mccabe==0.7.0, pyflakes==3.3.2, pycodestyle==2.13.0]
+
+  # Ordenador de imports (opcional, mas útil)
+  - repo: https://github.com/pre-commit/mirrors-isort
+    rev: v5.10.1
+    hooks:
+      - id: isort
