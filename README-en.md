@@ -8,7 +8,7 @@
 
 ## 📖 **About the Project**
 
-**VolunteerCodeCarajas** is much more than a system. This is a **learning project with real impact**. Born in the heart of the **Associação Carajás de Pessoas com Deficiência**, in Tucuruí - PA, this system aims to transform the association's management through **technology, data, and inclusion**.  
+**VolunteerCodeCarajas** is much more than a system. This is a **learning project with real impact**. Born in the heart of the **Associação Carajás de Pessoas com Deficiência**, in Tucuruí - PA, this system aims to transform the association's management through **technology, data, and inclusion**.
 Every line of code written here is a step toward a more accessible, fair, and inclusive world. 🚀
 
 This is a **volunteer project**, which I started developing **from scratch**, with the goal to **learn, grow, and impact lives**. My journey began on **04/10/2025**, and this is just the beginning. This repository, still empty of advanced functionalities, contains **the first step**: the **member registration system**. As I learn and grow, the system will be expanded to **manage dues, finances, and projects of the association**.
@@ -48,7 +48,7 @@ This project is the **bridge between the theory I’ve learned and the practice 
 Here’s my **invitation to collaborate**:
 
 - 💻 **IT and Data Engineering Professionals**: If you have experience in **system development**, **data engineering**, **data security**, or any related field, your contribution will be essential! If you can spare **15 minutes of your time** to discuss the first steps or help with requirement analysis, I would be immensely grateful!
-  
+
 - 🧠 **Psychologists and Neuropsychologists**: Given my autism and ADHD, your help in building a **mental and structured organization** of ideas will be very important. If you also have some knowledge of IT, even better! Your collaboration will be key in ensuring the project is accessible and efficient.
 
 - 📚 **Students and Beginners in PostgreSQL**: If you are starting your journey in **databases** and have time to contribute, this is the **perfect place** to learn and collaborate practically. Together, we can grow and build something **impactful** for the community.
@@ -84,13 +84,13 @@ If you identify with the project, have suggestions, or want to contribute in any
 
 ## 🌟 **Let’s Build a Barrier-Free Future Together**
 
-This project is not just about **developing a system**. It is about **inclusion, diversity, and learning**. Here, every line of code is a chance to break **boundaries**, to transform **lives**, and to show that, with **collaboration**, we can create something **sustainable and transformative**. 
+This project is not just about **developing a system**. It is about **inclusion, diversity, and learning**. Here, every line of code is a chance to break **boundaries**, to transform **lives**, and to show that, with **collaboration**, we can create something **sustainable and transformative**.
 
 **Join me** to create a **more inclusive and accessible future**. ✨
 
 ---
 
-With care,  
-**Roberta** 🐍💙  
-📍 Tucuruí, Pará  
+With care,
+**Roberta** 🐍💙
+📍 Tucuruí, Pará
 📚 Data engineer in progress | Volunteer at Associação Carajás | Autistic, ADHD, and a dreamer 🌌
