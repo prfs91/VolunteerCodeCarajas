@@ -1,0 +1,19 @@
+// recomendações de extensões
+
+{
+    "recommendations": [
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "ms-toolsai.jupyter",
+      "njpwerner.autodocstring",
+      "ms-azuretools.vscode-docker",
+      "batisteo.vscode-django",
+      "donjayamanne.python-environment-manager",
+      "visualstudioexptteam.vscodeintellicode",
+      "streetsidesoftware.code-spell-checker",
+      "mhutchie.git-graph",
+      "eamodio.gitlens",
+      "esbenp.prettier-vscode",
+      "kevinrose.vsc-python-indent"
+    ]
+  }
