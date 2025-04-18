@@ -1,9 +1,9 @@
-name: Update Date in Wiki Files
+name: Update Date in README
 
 on:
   push:
     paths:
-      - '**/*.md'
+      - 'README.md'
 
 jobs:
   update_date:
@@ -15,32 +15,32 @@ jobs:
       with:
         fetch-depth: 2
 
-    - name: Atualizar datas nos arquivos Markdown modificados
+    - name: Atualizar data no README.md, se modificado
       run: |
         git fetch origin main
         MODIFIED_FILES=$(git diff --name-only HEAD~1 HEAD 2>/dev/null | grep '\.md$' || true)
 
         if [ -z "$MODIFIED_FILES" ]; then
-          echo "Nenhum arquivo Markdown foi modificado. Encerrando workflow."
+          echo "README.md não foi modificado. Encerrando workflow."
           exit 0
         fi
         
         for FILE_PATH in $MODIFIED_FILES; do
-          echo "Atualizando data em: $FILE_PATH"
+          echo "Atualizando data em: $MODIFIED_FILES""
           LAST_MODIFIED=$(date +"%Y-%m-%d %H:%M:%S")
           
-          if grep -q "^Última modificação em:" "$FILE_PATH"; then
-            sed -i "s/^Última modificação em:.*/Última modificação em: $LAST_MODIFIED/" "$FILE_PATH"
+          if grep -q "^Última modificação em:" "README.md"; then
+            sed -i "s/^Última modificação em:.*/Última modificação em: $LAST_MODIFIED/" "README.md"
           else
-            echo -e "\n**Última modificação em:** $LAST_MODIFIED" >> "$FILE_PATH"
+            echo -e "\n**Última modificação em:** $LAST_MODIFIED" >> "README.md"
           fi
         done
 
         git config --global user.name "prfs91"
         git config --global user.email "71240638+prfs91@users.noreply.github.com"
 
-        git add $MODIFIED_FILES
-        git commit -m "📚 docs(workflow): Update modification date in wiki file" || echo "Nenhuma alteração para commitar"
+        git add README.md
+        git commit -m "📚 docs(workflow): Update modification date in README.md" || echo "Nenhuma alteração para commitar"
         git push
         
         git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/prfs91/VolunteerCodeCarajas.wiki.git
