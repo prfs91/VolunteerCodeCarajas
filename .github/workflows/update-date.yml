@@ -43,4 +43,3 @@ jobs:
         git commit -m "📚 docs(workflow): Update modification date in README.md" || echo "Nenhuma alteração para commitar"
         git push
         
-        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/prfs91/VolunteerCodeCarajas.wiki.git
