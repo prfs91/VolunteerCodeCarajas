@@ -26,7 +26,7 @@ jobs:
         fi
         
         for FILE_PATH in $MODIFIED_FILES; do
-          echo "Atualizando data em: $MODIFIED_FILES""
+          echo "Atualizando data em: $FILE_PATH"
           LAST_MODIFIED=$(date +"%Y-%m-%d %H:%M:%S")
           
           if grep -q "^Última modificação em:" "README.md"; then
