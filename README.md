@@ -104,6 +104,4 @@ Com carinho,
 
 ---
 
-**Última modificação em:** 
-
-**Última modificação em:** 2025-04-18 04:18:11
+**Última modificação em:** 12
