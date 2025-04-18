@@ -28,7 +28,7 @@ jobs:
         
         for FILE_PATH in $MODIFIED_FILES; do
           echo "Atualizando data em: $FILE_PATH"
-          LAST_MODIFIED=$(date +"%Y-%m-%d %H:%M:%S")
+          LAST_MODIFIED=$(date +"%Y-%m-%d %H:%M:%S (America/Sao_Paulo)")
           
           if grep -q "^\*\*Última modificação em:\*\*" "$FILE_PATH"; then
             sed -i "s|^\*\*Última modificação em:\*\*.*|**Última modificação em:** $LAST_MODIFIED|" "$FILE_PATH"
@@ -43,4 +43,3 @@ jobs:
         git add README.md
         git commit -m "📚 docs(workflow): Update modification date in README.md" || echo "Nenhuma alteração para commitar"
         git push
-        
