@@ -1,0 +1,5 @@
+# Ferramentas opcionais para dev
+
+black==24.3.0         # Autoformatador
+isort==5.13.2         # Organizador de imports
+pre-commit==3.7.0     # Hook para validar antes do git commit
