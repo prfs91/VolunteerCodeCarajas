@@ -10,13 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
-# Importa a função 'config' do pacote 'python-decouple', usada para ler variáveis do arquivo .env
-from decouple import config
-
 from pathlib import Path
 
 # Importa o pacote que transforma uma URL de banco de dados em um dicionário no formato que o Django espera
 import dj_database_url
+# Importa a função 'config' do pacote 'python-decouple', usada para ler variáveis do arquivo .env
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
