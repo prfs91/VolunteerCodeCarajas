@@ -30,8 +30,8 @@ jobs:
           echo "Atualizando data em: $FILE_PATH"
           LAST_MODIFIED=$(date +"%Y-%m-%d %H:%M:%S")
           
-          if grep -q "^Última modificação em:" "$FILE_PATH"; then
-            sed -i "s/\*\*Última modificação em:.*\*\*/**Última modificação em: $LAST_MODIFIED**/" "$FILE_PATH"
+          if grep -q "^\*\*Última modificação em:\*\*" "$FILE_PATH"; then
+            sed -i "s|^\*\*Última modificação em:\*\*.*|**Última modificação em:** $LAST_MODIFIED|" "$FILE_PATH"
           else
             echo -e "\n**Última modificação em:** $LAST_MODIFIED" >> "$FILE_PATH"
           fi
