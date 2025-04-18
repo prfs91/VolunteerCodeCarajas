@@ -1,0 +1,24 @@
+// Configurações para debug (ex: FastAPI, Flask, etc)
+
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Django: Runserver",
+        "type": "python",
+        "request": "launch",
+        "program": "${workspaceFolder}/manage.py",
+        "args": [
+          "runserver",
+          "0.0.0.0:8000"
+        ],
+        "django": true,
+        "justMyCode": false,
+        "env": {
+          "DJANGO_SETTINGS_MODULE": "sistema_carajas.settings",
+          "PYTHONIOENCODING": "utf-8"
+        },
+        "console": "integratedTerminal"
+      }
+    ]
+  }
