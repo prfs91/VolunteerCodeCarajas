@@ -17,6 +17,7 @@ jobs:
 
     - name: Atualizar data no README.md, se modificado
       run: |
+        export TZ=America/Sao_Paulo
         git fetch origin main
         MODIFIED_FILES=$(git diff --name-only HEAD~1 HEAD 2>/dev/null | grep '\.md$' || true)
 
@@ -29,10 +30,10 @@ jobs:
           echo "Atualizando data em: $FILE_PATH"
           LAST_MODIFIED=$(date +"%Y-%m-%d %H:%M:%S")
           
-          if grep -q "^Última modificação em:" "README.md"; then
-            sed -i "s/^Última modificação em:.*/Última modificação em: $LAST_MODIFIED/" "README.md"
+          if grep -q "^Última modificação em:" "$FILE_PATH"; then
+            sed -i "s/\*\*Última modificação em:.*\*\*/**Última modificação em: $LAST_MODIFIED**/" "$FILE_PATH"
           else
-            echo -e "\n**Última modificação em:** $LAST_MODIFIED" >> "README.md"
+            echo -e "\n**Última modificação em:** $LAST_MODIFIED" >> "$FILE_PATH"
           fi
         done
 
