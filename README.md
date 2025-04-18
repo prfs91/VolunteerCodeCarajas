@@ -99,7 +99,9 @@ Este projeto não é apenas sobre **desenvolver um sistema**. Ele é sobre **inc
 
 Com carinho,
 **Roberta Ferreira** 🐍💙
+
 📍 Tucuruí, Pará
+
 📚 Engenheira de dados em construção | Voluntária da Associação Carajás | Autista, TDAH e sonhadora 🌌
 
 ---
