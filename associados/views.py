@@ -1,7 +1,9 @@
-from django.shortcuts import render, redirect
 from django.contrib import messages  # Para exibir mensagens no template
+from django.shortcuts import redirect, render
+
 from .forms import AssociadoForm
 from .models import Associado
+
 
 # Exibe o formulário e processa o cadastro de associado
 def cadastrar_associado(request):
@@ -14,8 +16,9 @@ def cadastrar_associado(request):
             return redirect('lista_associados')  # Redireciona para a lista após salvar
     else:
         form = AssociadoForm()
-        
+
     return render(request, 'associados/cadastrar.html', {'form': form})
+
 
 # Exibe uma lista com todos os associados cadastrados
 def lista_associados(request):
