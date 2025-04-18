@@ -1,0 +1,26 @@
+// Configurações do VS Code para o projeto (ex: Python, linting, formatação)
+
+{
+    "python.pythonPath": ".venv\\Scripts\\python.exe",
+    "python.analysis.extraPaths": ["./src"],
+    "python.terminal.activateEnvironment": true,
+    "python.formatting.provider": "autopep8",
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "files.encoding": "utf8",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+    "editor.formatOnSave": true,
+    "docker.defaultComposeFilePaths": [
+      "docker-compose.yml"
+    ],
+    "terminal.integrated.env.windows": {
+      "PYTHONIOENCODING": "utf-8"
+    },
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/*.pyc": true
+    },
+    "python.envFile": "${workspaceFolder}/.env"
+  }
