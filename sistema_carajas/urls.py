@@ -15,8 +15,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from sistema_carajas import views #Isso assume que o views.py está dentro da pasta sistema_carajas, que é onde fica o urls.py principal.
-from django.urls import path, include
+from django.urls import include, path
+
+from sistema_carajas import \
+    views  # Isso assume que o views.py está dentro da pasta sistema_carajas, que é onde fica o urls.py principal.
 
 urlpatterns = [
     path('admin/', admin.site.urls),
