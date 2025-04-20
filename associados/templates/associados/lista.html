@@ -21,10 +21,10 @@
   <li class="list-group-item d-flex justify-content-between align-items-center">
     <div>
       <strong>{{ associado.nome }}</strong><br />
-      <small class="text-muted"
-        >{{ associado.email }} • Entrou em {{associado.data_entrada|date:"d/m/Y"
-        }}</small
-      >
+      <small class="text-muted">
+        {{ associado.email }} • Entrou em {{ associado.data_entrada|date:"d/m/Y"
+        }}
+      </small>
     </div>
   </li>
   {% endfor %}
