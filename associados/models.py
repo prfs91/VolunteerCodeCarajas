@@ -48,7 +48,7 @@ class Associado(models.Model):
     nacionalidade = models.CharField(max_length=50, blank=True)
     naturalidade = models.CharField(max_length=50, blank=True)
 
-    # CONTATO E ENDEREÇO
+    # CONTATO E ENDEREÇO (Agora com campos separados)
     cep = models.CharField(max_length=10, default='00000-000')  # O CEP continua armazenado
     logradouro = models.CharField(max_length=100, blank=True)  # Rua, avenida, etc.
     complemento = models.CharField(max_length=100, blank=True)  # Complemento do endereço (se houver)
@@ -132,6 +132,9 @@ class Associado(models.Model):
 
             numero_associado = f"ASSOC-{ano_atual}-{ultimo_codigo:04d}"
             self.numero_associado = numero_associado
+
+        # Chama a função para preencher o endereço automaticamente com o ViaCEP
+        self.preencher_endereco_via_cep()
 
         super(Associado, self).save(*args, **kwargs)  # Chama o método save original
 
