@@ -1,16 +1,39 @@
-{% extends 'base.html' %}
-
-{% block title %}Lista de Associados{% endblock %}
-
+{% extends 'base.html' %} {% block title %} Lista de Associados {% endblock %}
 {% block content %}
 <h1 class="mb-4">Lista de Associados</h1>
+
+{% if messages %} {% for message in messages %}
+<div
+  class="alert alert-{{ message.tags }} alert-dismissible fade show"
+  role="alert"
+>
+  {{ message }}
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Fechar"
+  ></button>
+</div>
+{% endfor %} {% endif %} {% if associados %}
 <ul class="list-group mb-3">
-    {% for associado in associados %}
-    <li class="list-group-item">
-        <strong>{{ associado.nome }}</strong> - {{ associado.email }} - Entrou em {{ associado.data_entrada|date:"d/m/Y" }}
-    </li>
-    {% empty %}
-    <li class="list-group-item text-muted">Nenhum associado encontrado.</li>
-    {% endfor %}
+  {% for associado in associados %}
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    <div>
+      <strong>{{ associado.nome }}</strong><br />
+      <small class="text-muted"
+        >{{ associado.email }} • Entrou em {{associado.data_entrada|date:"d/m/Y"
+        }}</small
+      >
+    </div>
+  </li>
+  {% endfor %}
 </ul>
+{% else %}
+<div class="alert alert-warning">Nenhum associado encontrado.</div>
+{% endif %}
+
+<a href="{% url 'cadastrar_associado' %}" class="btn btn-primary"
+  >Novo Associado</a
+>
 {% endblock %}
