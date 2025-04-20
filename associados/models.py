@@ -1,4 +1,5 @@
 import requests
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils import timezone
 from validate_docbr import CPF
