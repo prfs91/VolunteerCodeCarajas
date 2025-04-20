@@ -21,8 +21,12 @@ class AssociadoForm(forms.ModelForm):
             'naturalidade',
 
             # CONTATO E ENDEREÇO
-            'endereco',
             'cep',
+            'logradouro',
+            'complemento',
+            'bairro',
+            'cidade',
+            'uf',
             'telefone',
             'email',
 
@@ -57,3 +61,7 @@ class AssociadoForm(forms.ModelForm):
             # STATUS
             'ativo',
         ]  # Campos do formulário
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['numero_associado'].disabled = True  # campo só leitura
