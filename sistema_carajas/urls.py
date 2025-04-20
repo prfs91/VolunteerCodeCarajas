@@ -21,7 +21,8 @@ from sistema_carajas import \
     views  # Isso assume que o views.py está dentro da pasta sistema_carajas, que é onde fica o urls.py principal.
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('grappelli/', include('grappelli.urls')),  # URLs do Grappelli
+    path('admin/', admin.site.urls), # URLs do Django Admin
     path('', views.home, name='home'),
     path('associados/', include('associados.urls')),  # <-- inclui as URLs do app
 ]

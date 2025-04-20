@@ -25,11 +25,11 @@ jobs:
           echo "README.md não foi modificado. Encerrando workflow."
           exit 0
         fi
-        
+
         for FILE_PATH in $MODIFIED_FILES; do
           echo "Atualizando data em: $FILE_PATH"
           LAST_MODIFIED=$(date +"%Y-%m-%d %H:%M:%S (America/Sao_Paulo)")
-          
+
           if grep -q "^\*\*Última modificação em:\*\*" "$FILE_PATH"; then
             sed -i "s|^\*\*Última modificação em:\*\*.*|**Última modificação em:** $LAST_MODIFIED|" "$FILE_PATH"
           else
