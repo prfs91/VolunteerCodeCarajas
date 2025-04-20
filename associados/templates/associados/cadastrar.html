@@ -1,12 +1,20 @@
-{% extends 'base.html' %}
-
-{% block title %}Cadastrar Associado{% endblock %}
-
+{% extends 'base.html' %} {% block title %} Cadastrar Associado {% endblock %}
 {% block content %}
 <h1 class="mb-4">Cadastrar Associado</h1>
-<form method="post" class="mb-3">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="btn btn-success">Salvar</button>
+
+<form method="post" enctype="multipart/form-data" class="mb-3">
+  {% csrf_token %} {% if form.errors %}
+  <div class="alert alert-danger">
+    <strong>Erros encontrados:</strong>
+    <ul>
+      {% for field in form %} {% for error in field.errors %}
+      <li><strong>{{ field.label }}:</strong> {{ error }}</li>
+      {% endfor %} {% endfor %} {% for error in form.non_field_errors %}
+      <li>{{ error }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %} {{ form.as_p }}
+  <button type="submit" class="btn btn-success">Salvar</button>
 </form>
 {% endblock %}

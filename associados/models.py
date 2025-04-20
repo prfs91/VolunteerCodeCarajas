@@ -1,4 +1,4 @@
-from django.core.exceptions import ValidationError
+import requests
 from django.db import models
 from django.utils import timezone
 from validate_docbr import CPF
@@ -49,10 +49,14 @@ class Associado(models.Model):
     naturalidade = models.CharField(max_length=50, blank=True)
 
     # CONTATO E ENDEREÇO
-    endereco = models.CharField(max_length=200, default='Endereço não informado')
-    cep = models.CharField(max_length=10, default='00000-000')
-    telefone = models.CharField(max_length=15, blank=True) # Telefone é opcional (blank=True)
-    email = models.EmailField(db_index=True)
+    cep = models.CharField(max_length=10, default='00000-000')  # O CEP continua armazenado
+    logradouro = models.CharField(max_length=100, blank=True)  # Rua, avenida, etc.
+    complemento = models.CharField(max_length=100, blank=True)  # Complemento do endereço (se houver)
+    bairro = models.CharField(max_length=100, blank=True)  # Bairro
+    cidade = models.CharField(max_length=100, blank=True)  # Cidade
+    uf = models.CharField(max_length=2, blank=True)  # Estado (UF)
+    telefone = models.CharField(max_length=15, blank=True)  # Telefone
+    email = models.EmailField()  # Email
 
     # INFORMAÇÕES SOBRE A DEFICIÊNCIA
     tipo_deficiencia = models.CharField(max_length=100, default="Não informado", blank=True)
@@ -87,14 +91,33 @@ class Associado(models.Model):
     # Data de entrada é definida automaticamente na criação
     data_entrada = models.DateField(auto_now_add=True)
 
-    def is_menor_de_idade(self):
-        hoje = timezone.now().date()
-        idade = hoje.year - self.data_nascimento.year - (
-            (hoje.month, hoje.day) < (self.data_nascimento.month, self.data_nascimento.day)
-        )
-        return idade < 18
+    # Função para preencher o endereço automaticamente com base no CEP
+    def preencher_endereco_via_cep(self):
+        """Preenche automaticamente os campos de endereço usando a API ViaCEP"""
+        if not self.cep:
+            return  # Se o CEP estiver vazio, não faz nada
 
+        # Limpeza do formato do CEP (remove pontos e traços)
+        cep_limpo = self.cep.replace("-", "").strip()
+
+        # Requisição para a API ViaCEP
+        response = requests.get(f"https://viacep.com.br/ws/{cep_limpo}/json/")
+
+        if response.status_code == 200:
+            dados = response.json()
+
+            # Verifica se o CEP não retornou erro
+            if not dados.get("erro"):
+                # Preenche os campos do endereço
+                self.logradouro = dados.get("logradouro", "")
+                self.bairro = dados.get("bairro", "")
+                self.cidade = dados.get("localidade", "")
+                self.uf = dados.get("uf", "")
+                self.complemento = dados.get("complemento", "")
+
+    # Sobrescrevendo o método save para preencher automaticamente o número do associado
     def save(self, *args, **kwargs):
+        """Sobrescreve o método save para gerar automaticamente o número do associado"""
         if not self.numero_associado:  # Se o número do associado não foi preenchido
             ano_atual = str(timezone.now().year)  # Ano da data de entrada (você pode ajustar conforme necessário)
             ultimo_numero = Associado.objects.filter(
