@@ -33,5 +33,6 @@ sqlparse==0.5.3
 typing_extensions==4.13.2
 tzdata==2025.2
 urllib3==2.4.0
+validate-docbr==1.10.0
 virtualenv==20.30.0
 yarg==0.1.10
