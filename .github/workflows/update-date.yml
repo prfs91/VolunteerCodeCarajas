@@ -3,43 +3,43 @@ name: Update Date in README
 on:
   push:
     paths:
-      - 'README.md'
+      - "docs/**/*.md"
 
 jobs:
   update_date:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Wiki repository
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 2
+      - name: Checkout Wiki repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
 
-    - name: Atualizar data no README.md, se modificado
-      run: |
-        export TZ=America/Sao_Paulo
-        git fetch origin main
-        MODIFIED_FILES=$(git diff --name-only HEAD~1 HEAD 2>/dev/null | grep '\.md$' || true)
+      - name: Atualizar data no README.md, se modificado
+        run: |
+          export TZ=America/Sao_Paulo
+          git fetch origin main
+          MODIFIED_FILES=$(git diff --name-only HEAD~1 HEAD 2>/dev/null | grep '^docs/.*\.md$' || true)
 
-        if [ -z "$MODIFIED_FILES" ]; then
-          echo "README.md não foi modificado. Encerrando workflow."
-          exit 0
-        fi
-
-        for FILE_PATH in $MODIFIED_FILES; do
-          echo "Atualizando data em: $FILE_PATH"
-          LAST_MODIFIED=$(date +"%Y-%m-%d %H:%M:%S (America/Sao_Paulo)")
-
-          if grep -q "^\*\*Última modificação em:\*\*" "$FILE_PATH"; then
-            sed -i "s|^\*\*Última modificação em:\*\*.*|**Última modificação em:** $LAST_MODIFIED|" "$FILE_PATH"
-          else
-            echo -e "\n**Última modificação em:** $LAST_MODIFIED" >> "$FILE_PATH"
+          if [ -z "$MODIFIED_FILES" ]; then
+            echo "README.md não foi modificado. Encerrando workflow."
+            exit 0
           fi
-        done
 
-        git config --global user.name "prfs91"
-        git config --global user.email "71240638+prfs91@users.noreply.github.com"
+          for FILE_PATH in $MODIFIED_FILES; do
+            echo "Atualizando data em: $FILE_PATH"
+            LAST_MODIFIED=$(date +"%Y-%m-%d %H:%M:%S (America/Sao_Paulo)")
 
-        git add README.md
-        git commit -m "📚 docs(workflow): Update modification date in README.md" || echo "Nenhuma alteração para commitar"
-        git push
+            if grep -q "^\*\*Última modificação em:\*\*" "$FILE_PATH"; then
+              sed -i "s|^\*\*Última modificação em:\*\*.*|**Última modificação em:** $LAST_MODIFIED|" "$FILE_PATH"
+            else
+              echo -e "\n**Última modificação em:** $LAST_MODIFIED" >> "$FILE_PATH"
+            fi
+          done
+
+          git config --global user.name "prfs91"
+          git config --global user.email "71240638+prfs91@users.noreply.github.com"
+
+          git add README.md
+          git commit -m "📚 docs(workflow): Update modification date in README.md" || echo "Nenhuma alteração para commitar"
+          git push
