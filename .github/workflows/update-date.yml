@@ -1,4 +1,4 @@
-name: Update Date in README
+name: Atualizar data de modificação em arquivos Markdown
 
 on:
   push:
@@ -15,14 +15,14 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Atualizar data no README.md, se modificado
+      - name: Atualizar data nos arquivos modificados
         run: |
           export TZ=America/Sao_Paulo
           git fetch origin main
           MODIFIED_FILES=$(git diff --name-only HEAD~1 HEAD 2>/dev/null | grep '^docs/.*\.md$' || true)
 
           if [ -z "$MODIFIED_FILES" ]; then
-            echo "README.md não foi modificado. Encerrando workflow."
+            echo "Nenhum arquivo .md em /docs ou o README.md foi modificado. Encerrando workflow."
             exit 0
           fi
 
@@ -40,6 +40,6 @@ jobs:
           git config --global user.name "prfs91"
           git config --global user.email "71240638+prfs91@users.noreply.github.com"
 
-          git add README.md
-          git commit -m "📚 docs(workflow): Update modification date in README.md" || echo "Nenhuma alteração para commitar"
+          git add $MODIFIED_FILES
+          git commit -m "📚 docs(workflow): Update last modified date in markdown files" || echo "Nothing to commit"
           git push
