@@ -3,6 +3,7 @@ name: Atualizar data de modificação em arquivos Markdown
 on:
   push:
     paths:
+      - "README.md"
       - "docs/**/*.md"
 
 jobs:
@@ -13,13 +14,13 @@ jobs:
       - name: Checkout Wiki repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 2
+          token: ${{ secrets.GH_PAT_WRITE_DOCS }}
 
       - name: Atualizar data nos arquivos modificados
         run: |
           export TZ=America/Sao_Paulo
           git fetch origin main
-          MODIFIED_FILES=$(git diff --name-only HEAD~1 HEAD 2>/dev/null | grep '^docs/.*\.md$' || true)
+          MODIFIED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E '^(README\.md|docs/.*\.md)$' || true)
 
           if [ -z "$MODIFIED_FILES" ]; then
             echo "Nenhum arquivo .md em /docs ou o README.md foi modificado. Encerrando workflow."
@@ -33,13 +34,15 @@ jobs:
             if grep -q "^\*\*Última modificação em:\*\*" "$FILE_PATH"; then
               sed -i "s|^\*\*Última modificação em:\*\*.*|**Última modificação em:** $LAST_MODIFIED|" "$FILE_PATH"
             else
-              echo -e "\n**Última modificação em:** $LAST_MODIFIED" >> "$FILE_PATH"
+              echo -e "\n---\n**Última modificação em:** $LAST_MODIFIED" >> "$FILE_PATH"
             fi
+
+            git add "$FILE_PATH"
           done
 
           git config --global user.name "prfs91"
           git config --global user.email "71240638+prfs91@users.noreply.github.com"
 
-          git add $MODIFIED_FILES
           git commit -m "📚 docs(workflow): Update last modified date in markdown files" || echo "Nothing to commit"
+          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT_WRITE_DOCS }}@github.com/prfs91/VolunteerCodeCarajas.git
           git push
