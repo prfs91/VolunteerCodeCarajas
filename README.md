@@ -3,8 +3,9 @@
 > _“A tecnologia não tem fronteiras, assim como a inclusão e o conhecimento. Juntos, podemos construir um mundo sem barreiras.”_ 🌍
 
 ---
+| [**EN-US**](./README-en.md)            | [**Wiki**](https://prfs91.github.io/VolunteerCodeCarajas/)                     |
+|--------------------------|----------------------------------|
 
-[**EN-US**](./README-en.md)
 
 ## 📖 **Sobre o Projeto**
 
