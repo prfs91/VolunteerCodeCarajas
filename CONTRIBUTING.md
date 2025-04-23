@@ -27,22 +27,22 @@ Este é um projeto **aberto à comunidade**, voltado para impacto social atravé
    git clone https://github.com/SEU_USERNAME/VolunteerCodeCarajas.git
    ```
 3. Adicione o repositório original como upstream:
-  ```bash
-  git remote add upstream https://github.com/prfs91/VolunteerCodeCarajas.git
-  ```
+   ```bash
+   git remote add upstream https://github.com/prfs91/VolunteerCodeCarajas.git
+   ```
 4. Crie uma nova branch para suas contribuições:
-  ```bash
-  git checkout -b feat/NOME_DA_CONTRIBUICAO
-  ```
+   ```bash
+   git checkout -b feat/NOME_DA_CONTRIBUICAO
+   ```
 5. Faça suas alterações e adicione os arquivos:
-  ```bash
-  git add .
-  git commit -m "feat: descrição breve da contribuição"
-  ```
+   ```bash
+   git add .
+   git commit -m "feat: descrição breve da contribuição"
+   ```
 6. Envie para o seu repositório remoto:
-  ```bash
-  git push origin feat/NOME_DA_CONTRIBUICAO
-  ```
+   ```bash
+   git push origin feat/NOME_DA_CONTRIBUICAO
+   ```
 7. Crie um Pull Request no GitHub;
 
 ✅ Sempre que possível, siga a [Convenção de Commits](https://www.conventionalcommits.org/en/v1.0.0/#summary).
