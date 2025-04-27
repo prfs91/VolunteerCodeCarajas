@@ -49,3 +49,8 @@
     border-color: var(--accent-color);
     box-shadow: 0 0 0 0.25rem rgba(33, 150, 243, 0.25);
   }
+
+    .custom-card {
+        max-width: 800px;
+        margin: 0 auto;
+    }

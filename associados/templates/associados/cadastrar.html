@@ -1,13 +1,8 @@
 {% extends 'base.html' %} {% block title %} Cadastrar Associado {% endblock %}
 {% block content %}
 
-<div
-  class="card shadow-lg p-4 mb-5 bg-body rounded"
-  style="max-width: 800px; margin: 0 auto"
->
-  <h1 class="mb-4 text-center" style="color: var(--primary-color)">
-    Cadastrar Associado
-  </h1>
+<div class="card shadow-lg p-4 mb-5 bg-body rounded custom-card">
+  <h1 class="mb-4 text-center primary-color">Cadastrar Associado</h1>
 
   <form method="post" enctype="multipart/form-data" class="mb-3">
     {% csrf_token %} {% if form.errors %}
