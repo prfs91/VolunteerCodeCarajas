@@ -161,4 +161,3 @@ Se você tem sugestões, deseja colaborar ou quer conversar sobre o projeto:
 > ⚠️ **Este Wiki está em construção.**
 > Ainda estou estruturando os conteúdos e links. Algumas páginas podem estar vazias ou indisponíveis.
 > Esta é uma versão inicial da estrutura e pode ser atualizada conforme o projeto evolui.
-
