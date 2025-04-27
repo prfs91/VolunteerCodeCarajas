@@ -1,10 +1,29 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block title %}Página Inicial{% endblock %} {% block
+content %}
 
-{% block title %}Página Inicial{% endblock %}
+<div class="text-center py-5">
+  <div
+    class="card shadow-lg p-5 mb-4 bg-body rounded"
+    style="background: linear-gradient(135deg, #f2f2f2 0%, rgb(7, 2, 2) 100%)"
+  >
+    <h1 class="display-4 mb-4 fw-bold" style="color: var(--primary-color)">
+      Bem-vindo(a) ao Sistema da Associação Carajás
+      <span class="text-success">💚</span>
+    </h1>
 
-{% block content %}
-    <div class="text-center">
-        <h1 class="mb-4">Bem-vindo(a) ao Sistema da Associação Carajás 💚</h1>
-        <p>Utilize o menu acima para navegar entre os módulos.</p>
+    <p class="lead fs-5" style="max-width: 600px; margin: 0 auto">
+      Utilize o menu acima para navegar entre os módulos e transformar vidas
+      através da tecnologia inclusiva.
+    </p>
+    <div class="mt-5">
+      <img
+        src="data:image/svg+xml;base64,..."
+        alt="Ilustração de inclusão digital"
+        class="img-fluid"
+        style="max-width: 400px"
+      />
     </div>
+  </div>
+</div>
+
 {% endblock %}
