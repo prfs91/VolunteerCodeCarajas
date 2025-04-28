@@ -7,41 +7,41 @@ Aqui você encontrará todas as informações necessárias para instalar, config
 Siga o sumário abaixo para navegar de maneira rápida e organizada.
 
 ## 📖 Introdução
-- [Visão Geral do Projeto](docs/overview.md)
-- [Changelog de Versões](CHANGELOG.md)
+- [Visão Geral do Projeto](./docs/overview.md)
+- [Changelog de Versões](./CHANGELOG.md)
 
 ## 🛠️ Guia de Instalação e Ambiente
-- [Clonando o Repositório](docs/guides/setup/cloning-repo.md)
-- [Configurando o Script Start.ps1](docs/guides/setup/configure-start-ps1.md)
-- [Instalação do Docker](docs/guides/setup/docker-setup.md)
-- [Instalação do PostgreSQL no Windows](docs/guides/setup/postgresql-windows.md)
+- [Clonando o Repositório](./docs/guides/setup/cloning-repo.md)
+- [Configurando o Script Start.ps1](./docs/guides/setup/configure-start-ps1.md)
+- [Instalação do Docker](./docs/guides/setup/docker-setup.md)
+- [Instalação do PostgreSQL no Windows](./docs/guides/setup/postgresql-windows.md)
 
 ## 🔀 Fluxo de Trabalho e Contribuição
-- [Convenções de Commits](docs/guides/workflow/commit-conventions.md)
-- [Estratégia de Branches](docs/guides/workflow/branching-strategy.md)
-- [Processo de Pull Requests](docs/guides/workflow/pull-request-process.md)
-- [Código de Conduta](CODE_OF_CONDUCT.md)
-- [Guia de Contribuição](CONTRIBUTING.md)
+- [Convenções de Commits](./docs/guides/workflow/commit-conventions.md)
+- [Estratégia de Branches](./docs/guides/workflow/branching-strategy.md)
+- [Processo de Pull Requests](./docs/guides/workflow/pull-request-process.md)
+- [Código de Conduta](./CODE_OF_CONDUCT.md)
+- [Guia de Contribuição](./CONTRIBUTING.md)
 
 ## 🏗️ Arquitetura do Sistema
-- [Visão Geral da Arquitetura](docs/architecture/overview.md)
-- [Diagrama da Arquitetura](docs/architecture/diagram.png)
+- [Visão Geral da Arquitetura](./docs/architecture/overview.md)
+- [Diagrama da Arquitetura](./docs/architecture/diagram.png)
 
 ## 🧪 Testes e Qualidade
-- [Estratégias de Testes](docs/guides/quality/testing.md)
-- [Práticas de Logging](docs/guides/quality/logging.md)
+- [Estratégias de Testes](./docs/guides/quality/testing.md)
+- [Práticas de Logging](./docs/guides/quality/logging.md)
 
 ## 🌍 Internacionalização (i18n)
-- [Traduzindo a Interface do Sistema](docs/guides/i18n/translate-ui.md)
-- [Traduzindo a Documentação](docs/guides/i18n/documentation-translations.md)
+- [Traduzindo a Interface do Sistema](./docs/guides/i18n/translate-ui.md)
+- [Traduzindo a Documentação](./docs/guides/i18n/documentation-translations.md)
 
 ## 📄 Templates
-- [Template: Reportar Bug](docs/templates/issue-bug.md)
-- [Template: Solicitar Funcionalidade](docs/templates/issue-feature.md)
-- [Template: Pull Request](docs/templates/pull-request.md)
+- [Template: Reportar Bug](./docs/templates/issue-bug.md)
+- [Template: Solicitar Funcionalidade](./docs/templates/issue-feature.md)
+- [Template: Pull Request](./docs/templates/pull-request.md)
 
 ## 📜 Licença
-- [Licença MIT](LICENSE)
+- [Licença MIT](./LICENSE)
 
 ---
 
