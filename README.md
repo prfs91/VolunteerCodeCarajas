@@ -3,7 +3,7 @@
 > _“A tecnologia não tem fronteiras, assim como a inclusão e o conhecimento. Juntos, podemos construir um mundo sem barreiras.”_ 🌍
 
 ---
-| [**EN-US**](./README-en.md)            | [**Wiki**](./docs/index.md)                     | [**Contribuição**](./CONTRIBUTING.md)                     |
+| [**SUMMARY**](docs/SUMMARY.md) | [**Contribuição**](./CONTRIBUTING.md) | [**EN-US**](./README-en.md) |
 |--------------------------|----------------------------------|----------------------------------|
 
 
