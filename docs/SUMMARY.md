@@ -7,11 +7,11 @@ Aqui você encontrará todas as informações necessárias para instalar, config
 Siga o sumário abaixo para navegar de maneira rápida e organizada.
 
 ## 📖 Introdução
-- [Visão Geral do Projeto](./docs/overview.md)
+- [Visão Geral do Projeto](./docs\architecture\overview.md)
 - [Changelog de Versões](./CHANGELOG.md)
 
 ## 🛠️ Guia de Instalação e Ambiente
-- [Clonando o Repositório](./docs/guides/setup/cloning-repo.md)
+- [Clonando o Repositório](./docs\guides\setup\cloning-repo.md)
 - [Configurando o Script Start.ps1](./docs/guides/setup/configure-start-ps1.md)
 - [Instalação do Docker](./docs/guides/setup/docker-setup.md)
 - [Instalação do PostgreSQL no Windows](./docs/guides/setup/postgresql-windows.md)
