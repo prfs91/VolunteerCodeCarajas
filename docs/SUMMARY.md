@@ -69,5 +69,5 @@ Siga o sumário abaixo para navegar de maneira rápida e organizada.
 ---
 
 <p align="right">
-  <strong>📅 Última atualização:</strong> 21/04/2025
+  <strong>📅 Última atualização:</strong> 28/04/2025
 </p>
