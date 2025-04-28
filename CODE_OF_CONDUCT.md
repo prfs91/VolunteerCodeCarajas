@@ -72,11 +72,9 @@ Participantes que violarem este Código de Conduta poderão sofrer ações corre
 
 Este Código foi inspirado no [Contributor Covenant, versão 2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
 
-<p align="center">
-  <a href="https://www.contributor-covenant.org/version/2/1/code_of_conduct/" target="_blank">
-    <img src="https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg" alt="Contributor Covenant Badge">
-  </a>
-</p>
+<a href="https://www.contributor-covenant.org/version/2/1/code_of_conduct/" target="_blank">
+  <img src="https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg" alt="Contributor Covenant Badge">
+</a>
 
 ---
 
