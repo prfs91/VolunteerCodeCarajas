@@ -45,7 +45,7 @@ Este é um projeto **aberto à comunidade**, voltado para impacto social atravé
    ```
 7. Crie um Pull Request no GitHub;
 
-✅ Sempre que possível, siga a [Convenção de Commits](https://www.conventionalcommits.org/en/v1.0.0/#summary).
+✅ Sempre que possível, siga a [Convenção de Commits](docs/guides/workflow/commit-conventions.md).
 
 ---
 
