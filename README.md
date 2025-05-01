@@ -3,8 +3,19 @@
 > _“A tecnologia não tem fronteiras, assim como a inclusão e o conhecimento. Juntos, podemos construir um mundo sem barreiras.”_ 🌍
 
 ---
-| [**SUMMARY**](docs/SUMMARY.md) | [**Contribuição**](./CONTRIBUTING.md) | [**EN-US**](./README-en.md) |
-|--------------------------|----------------------------------|----------------------------------|
+
+<div align="center">
+
+<table>
+  <tr>
+    <td><a href="docs/SUMMARY.md"><strong>SUMMARY</strong></a></td>
+    <td><a href="./CONTRIBUTING.md"><strong>Contribuição</strong></a></td>
+    <td><a href="./README-en.md"><strong>EN-US</strong></a></td>
+  </tr>
+</table>
+
+</div>
+
 
 
 ## 📖 **Sobre o Projeto**
@@ -144,11 +155,26 @@ Esse script foi incluído na raiz deste repositório para facilitar o uso com co
 
 <div align="justify">
 
-  Se você se identifica com o projeto, tem sugestões ou deseja contribuir de alguma forma, **estou aberta a conversas e colaborações**! 😊
-  - 💬 **Me envie uma mensagem aqui no GitHub** ou por e-mail para [**pamellaferreira.si@gmail.com**](mailto:pamellaferreira.si@gmail.com)
-  - 🔗 **Se você quiser saber mais** ou simplesmente **acompanhar a jornada**, siga-me no [LinkedIn](https://www.linkedin.com/in/robertaferreira91)
+Se você se identifica com o projeto, tem sugestões ou deseja contribuir de alguma forma, **estou aberta a conversas e colaborações**! 😊
+
+- 💬 **Me envie uma mensagem aqui no GitHub** ou por e-mail para [**pamellaferreira.si@gmail.com**](mailto:pamellaferreira.si@gmail.com)  
+- 🔗 **Se você quiser saber mais** ou simplesmente **acompanhar a jornada**, siga-me no [LinkedIn](https://www.linkedin.com/in/robertaferreira91)  
+- 📲 **Ou fale comigo diretamente pelo WhatsApp:** [Clique para enviar mensagem](https://wa.me/5594992797521)
 
 </div>
+
+<br>
+
+<p align="center">
+  <strong>📅 Agende uma conversa sobre o Projeto VolunteerCodeCarajás</strong><br>
+  Clique no botão abaixo para escolher um horário disponível:
+</p>
+
+<p align="center">
+  <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1Fm6KqLxgcozCYs_Qbe3ijTaRPIOWr6mC31tnymAHb-zKkG-O5f_TN4zrREVt1FIHyFZhCLRBD?gv=true" target="_blank">
+    <img src="https://img.shields.io/badge/Agendar%20Conversa-VolunteerCodeCarajás-orange?style=for-the-badge" alt="Agendar Conversa">
+  </a>
+</p>
 
 ---
 
@@ -173,4 +199,4 @@ Com carinho,
 
 ---
 
-**Última modificação em:** 28/04/2025
+**Última modificação em:** 01/05/2025
