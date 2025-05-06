@@ -67,14 +67,6 @@ Marque os itens concluídos para facilitar a revisão:
 
 ---
 
-> ⚠️ **Aviso Importante:**
-> 
-> Esta documentação está em fase de desenvolvimento. 
-> Algumas seções podem estar incompletas ou temporariamente indisponíveis.
-> Atualizações estão sendo realizadas de forma contínua para aprimorar o conteúdo.
-
----
-
 <p align="center">
   📚 Este documento integra a documentação oficial do projeto <strong>VolunteerCodeCarajas</strong>.
 </p>
