@@ -10,7 +10,7 @@ docs/
 
 -->
 
-# 📌 TEMPLATE: Solicitação de Funcionalidade
+# 📌 Solicitação de Funcionalidade
 
 ---
 
