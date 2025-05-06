@@ -14,15 +14,15 @@ docs/
 
 ---
 
-name: "🌟 Solicitação de Funcionalidade"
+**name:** "🌟 Solicitação de Funcionalidade"
 
-about: Sugira uma nova funcionalidade para o projeto VolunteerCodeCarajas
+**about:** Sugira uma nova funcionalidade para o projeto VolunteerCodeCarajas
 
-title: "[Feature] Nome claro da funcionalidade desejada"
+**title:** "[Feature] Nome claro da funcionalidade desejada"
 
-labels: "feature request", "✨ melhoria"
+**labels:** "feature request", "✨ melhoria"
 
-assignees: ''
+**assignees:** ''
 
 ---
 
@@ -70,7 +70,7 @@ Explique **por que** essa funcionalidade é importante:
 ## 🛠️ Possíveis Soluções Técnicas (Opcional)
 
 Se você tiver alguma ideia sobre como essa funcionalidade poderia ser implementada, compartilhe!  
-Não precisa ser técnico — apenas o que você imagina que seria útil saber.  
+Não precisa ser técnico - apenas o que você imagina que seria útil saber.  
 Ex: *Pode ser um novo model no Django chamado `Dependente`, com foreign key para `Associado`.*
 
 ---
