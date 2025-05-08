@@ -14,7 +14,7 @@ docs/
 
 # Em breve
 
-Estamos trabalhando para trazer mais informações a esta documentação.
+Estamos trabalhando para trazer mais informações a esta documentação..
 
 Fique atento às próximas atualizações!
 
