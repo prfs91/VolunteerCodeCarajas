@@ -1,0 +1,36 @@
+name: Atualizar Contribuidores
+
+on:
+  # Agendamento automático semanal: toda segunda-feira às 12h UTC
+  schedule:
+    - cron: '0 12 * * 1'
+  # Permite execução manual via botão "Run workflow" no GitHub
+  workflow_dispatch:
+  # Também roda se o script Python for alterado
+  push:
+    paths:
+      - ".github/scripts/update-contributors.py"
+
+jobs:
+  update-contributors:
+    runs-on: ubuntu-latest  # Define o sistema operacional usado
+
+    steps:
+      - name: Fazer checkout do repositório
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'  # Usa a versão mais recente do Python 3
+
+      - name: Executar script Python
+        run: python .github/scripts/atualizar_contribuidores.py
+
+      - name: Commit e push se README foi alterado
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add README.md
+          git diff --quiet && git diff --staged --quiet || git commit -m "🤖 Atualiza lista de contribuidores"
+          git push
