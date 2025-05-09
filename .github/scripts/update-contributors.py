@@ -18,7 +18,7 @@ if res.status_code != 200:
 contributors = sorted(res.json(), key=lambda c: c["contributions"], reverse=True)
 
 # Monta o bloco de markdown com as fotos e links dos contribuidores
-bloco_contribuidores = "## 👥 Contribuidores\n\n"
+bloco_contribuidores = "## 👥 **Contribuidores Voluntários**\n\n"
 for c in contributors[:LIMIT]:
     login = c["login"]
     avatar = c["avatar_url"]
