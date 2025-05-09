@@ -139,5 +139,5 @@ Ao concluir essas etapas, seu repositório estará sincronizado com o repositór
 ---
 
 <p align="right">
-  <strong>📅 Última atualização:</strong> 28/04/2025
+  <strong>📅 Última atualização:</strong> 09/05/2025
 </p>
