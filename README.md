@@ -2,6 +2,10 @@
 
 > _“A tecnologia não tem fronteiras, assim como a inclusão e o conhecimento. Juntos, podemos construir um mundo sem barreiras.”_ 🌍
 
+<div align="center">
+  <img src="https://img.shields.io/github/contributors/prfs91/VolunteerCodeCarajas.svg" alt="Contribuidores">
+</div>
+
 ---
 
 <div align="center">
@@ -186,6 +190,13 @@ Se você se identifica com o projeto, tem sugestões ou deseja contribuir de alg
   **Junte-se a mim** para criar um **futuro mais inclusivo e acessível**. ✨
 
 </div>
+
+---
+
+## 👥 **Contribuidores Voluntários**
+
+<!-- INICIO-CONTRIBUIDORES -->
+<!-- FIM-CONTRIBUIDORES -->
 
 ---
 
