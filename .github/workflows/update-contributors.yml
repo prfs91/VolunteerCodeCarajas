@@ -24,6 +24,9 @@ jobs:
         with:
           python-version: '3.x'  # Usa a versão mais recente do Python 3
 
+      - name: Verificar versão do Python
+        run: python --version  # Verifica se o Python foi instalado corretamente
+
       - name: Executar script Python
         run: python .github/scripts/update-contributors.py
 
