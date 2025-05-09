@@ -25,7 +25,7 @@ jobs:
           python-version: '3.x'  # Usa a versão mais recente do Python 3
 
       - name: Executar script Python
-        run: python .github/scripts/atualizar_contribuidores.py
+        run: python .github/scripts/update-contributors.py
 
       - name: Commit e push se README foi alterado
         run: |
