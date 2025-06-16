@@ -20,7 +20,14 @@
 
 </div>
 
+> ⚠️ **ATUALIZAÇÃO IMPORTANTE – Projeto em Pausa Temporária**
+>
+> Por motivos de saúde e compromissos pessoais inadiáveis, o projeto **VolunteerCodeCarajas** está temporariamente suspenso. Estou passando por um período de reestruturação física, mental e organizacional, e precisei priorizar cuidados essenciais.
+> A pausa é por tempo indeterminado, mas estimo um período de aproximadamente um mês para retomar as atividades. No entanto, isso pode variar conforme meu processo de recuperação.
+> A missão do projeto segue viva, mesmo em pausa, a essência do VolunteerCodeCarajas permanece: inclusão, tecnologia e transformação social.
+> Agradeço pela compreensão e apoio de todos que acompanham a iniciativa. Assim que possível, atualizarei este repositório com novidades.
 
+---
 
 ## 📖 **Sobre o Projeto**
 
@@ -180,6 +187,8 @@ Se você se identifica com o projeto, tem sugestões ou deseja contribuir de alg
   </a>
 </p>
 
+> 📌 **Nota:** A agenda de reuniões e colaborações está temporariamente suspensa por motivos de saúde. Avisarei aqui assim que for retomada.
+
 ---
 
 ## 🌟 **Vamos Juntos Construir um Futuro Sem Barreiras**
@@ -210,4 +219,4 @@ Com carinho,
 
 ---
 
-**Última modificação em:** 01/05/2025
+**Última modificação em:** 16/06/2025
